@@ -39,8 +39,8 @@ import 'package:flutter/material.dart';
 
 // Create a DDCoordinates object
 DDCoordinates ddCoordInput = DDCoordinates(
-    latitude: -20.762535,
-    longitude: -41.531941,
+  latitude: -20.762535,
+  longitude: -41.531941,
 );
 
 // call fromDD static method from DMSCoordinates
@@ -55,21 +55,21 @@ Convert DMS to DD
 
 ```dart
 // Create a DMSCoordinates object
- DMSCoordinates dmsCoordInput = DMSCoordinates(
-    latDegrees: 20,
-    latMinutes: 45,
-    latSeconds: 45.12540000,
-    latDirection: DirectionY.south,
-    lonDegrees: 41,
-    lonMinutes: 31,
-    lonSeconds: 54.98760000,
-    lonDirection: DirectionX.west,
-  );
+DMSCoordinates dmsCoordInput = DMSCoordinates(
+  latDegrees: 20,
+  latMinutes: 45,
+  latSeconds: 45.12540000,
+  latDirection: DirectionY.south,
+  lonDegrees: 41,
+  lonMinutes: 31,
+  lonSeconds: 54.98760000,
+  lonDirection: DirectionX.west,
+);
 
 // call fromDMS static method from DDCoordinates
- DDCoordinates ddCoords = DDCoordinates.fromDMS(dmsCoordInput);
+DDCoordinates ddCoords = DDCoordinates.fromDMS(dmsCoordInput);
 
- debugPrint('Output DD: ${ddCoords.toString()}');
+debugPrint('Output DD: ${ddCoords.toString()}');
 // Print output of overridden toString method:
 // flutter: Output DD: -20.762534833333333, -41.531940999999996
 ```
@@ -78,7 +78,7 @@ Convert DD to UTM
 
 ```dart
 // call fromDD static method from UTMCoordinates
- UTMCoordinates utmCoord = UTMCoordinates.fromDD(ddCoordInput);
+UTMCoordinates utmCoord = UTMCoordinates.fromDD(ddCoordInput);
 
 debugPrint('Output UTM: ${utmCoord.toString()}');
 // Print output of overridden toString method:
