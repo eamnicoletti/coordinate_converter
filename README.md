@@ -6,11 +6,13 @@
 
 A package for converting between UTM, DMS and DD coordinates in the WGS84 ellipsoid model.
 
+
 - **UTM** | Universal Transverse Mercator
 - **DMS** | - Degrees, Minutes and Seconds
 - **DD** | - Decimal Degrees
 
 - **WGS-84** | Standart used in most maps such as Google Maps, Apple Maps, Mapbox, OpenStreetMaps, etc
+
 
 The Universal Transverse Mercator - UTM coordinate system is explained on this [Wikipedia](https://en.wikipedia.org/wiki/Universal_Transverse_Mercator_coordinate_system) page.
 The Geographic Coordinate System - GCS is explained on this [Wikipedia](https://en.wikipedia.org/wiki/Geographic_coordinate_system) page.
@@ -27,7 +29,7 @@ dependencies:
   coord_convert: 0.3.0
 ```
 
-## Usage
+### Usage
 
 Convert DD to DMS
 
