@@ -46,6 +46,13 @@ class DMSCoordinates {
     return CoordConverter.ddToDMS(ddCoords);
   }
 
+  /// Converts the current instance of Degrees, Minutes, and Seconds (DMS)
+  /// coordinates [DMSCoordinates] to Decimal Degrees (DD) coordinates and
+  /// returns the result as a [DDCoordinates] object.
+  DDCoordinates toDD() {
+    return CoordConverter.dmsToDD(this);
+  }
+
   /// Returns boths coordinates in [String].
   @override
   String toString() {

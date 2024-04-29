@@ -82,7 +82,7 @@ UTMCoordinates utmCoord = UTMCoordinates.fromDD(ddCoordInput);
 
 debugPrint('Output UTM: ${utmCoord.toString()}');
 // Print output of overridden toString method:
-// flutter: Output UTM: 24 S 236379.0 | 7702067.0
+// flutter: Output UTM: 24 236379.0 | 7702067.0 S
 ```
 
 ## Contributing

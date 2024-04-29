@@ -44,6 +44,6 @@ class UTMCoordinates {
   /// Returns boths coordinates in [String].
   @override
   String toString() {
-    return '$zoneNumber ${isSouthernHemisphere ? 'S' : 'N'} $x | $y ';
+    return '$zoneNumber $x / $y ${isSouthernHemisphere ? 'S' : 'N'}';
   }
 }
