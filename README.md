@@ -1,6 +1,6 @@
 # Coordinate Converter
 
-<!-- [![pub package][pub_badge]][pub_badge_link] -->
+[![pub package][pub_badge]][pub_badge_link]
 [![License: MIT][license_badge]][license_badge_link]
 [![style: very good analysis][badge]][badge_link]
 
@@ -93,6 +93,5 @@ Pull requests are welcome.
 [badge_link]: https://pub.dev/packages/very_good_analysis
 [license_badge]: https://img.shields.io/badge/license-MIT-blue.svg
 [license_badge_link]: https://opensource.org/licenses/MIT
-<!-- 
-[pub_badge]: https://img.shields.io/pub/v/
-[pub_badge_link]: https://pub.dartlang.org/packages/coordinate_converter -->
+[pub_badge]: https://img.shields.io/pub/v/coordinate_converter
+[pub_badge_link]: https://pub.dartlang.org/packages/coordinate_converter
