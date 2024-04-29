@@ -1,7 +1,7 @@
 name: coordinate_converter
 description: "Package for converting between UTM, DMS and DD coordinates in the WGS84 ellipsoid model"
 version: 0.3.0
-homepage:
+homepage: https://github.com/eamnicoletti/coordinate_converter
 
 environment:
   sdk: '>=3.2.6 <4.0.0'
