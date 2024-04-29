@@ -6,6 +6,32 @@ class CoordConverter {
   /// Since all methods are static, there's no need to create objects.
   CoordConverter._();
 
+  /// Converts Degrees-Minutes-Seconds (DMS) coordinates to Decimal Degrees (DD).
+  ///
+  /// This method assumes the coordinates are in the WGS84 reference system.
+  ///
+  /// Args:
+  ///   dmsCoords: The DMSCoordinates object containing the DMS values.
+  ///
+  /// Returns:
+  ///   A new DDCoordinates object with the converted decimal degrees values.
+  static DDCoordinates dmsToDD(DMSCoordinates dmsCoords) {
+    final ddLatitude = _convertLatDMSToDD(
+      dmsCoords.latDegrees,
+      dmsCoords.latMinutes,
+      dmsCoords.latSeconds,
+      dmsCoords.latDirection,
+    );
+    final ddLongitude = _converLongtDMSToDD(
+      dmsCoords.lonDegrees,
+      dmsCoords.lonMinutes,
+      dmsCoords.lonSeconds,
+      dmsCoords.lonDirection,
+    );
+
+    return DDCoordinates(latitude: ddLatitude, longitude: ddLongitude);
+  }
+
   /// Converts Decimal Degrees (DD) coordinates to Degrees-Minutes-Seconds (DMS).
   ///
   /// This method assumes the coordinates are in the WGS84 reference system.
@@ -30,6 +56,19 @@ class CoordConverter {
       lonDirection: lonParts[3] == 0 ? DirectionX.east : DirectionX.west,
     );
   }
+
+  // Converts Universal Transverse Mercator (UTM) coordinates to Decimal Degrees (DD).
+  ///
+  /// This function assumes the UTM coordinates are in the WGS84 reference system.
+  ///
+  /// Args:
+  ///   utmEasting: The easting value in meters.
+  ///   utmNorthing: The northing value in meters.
+  ///   utmZone: The UTM zone number (1 to 60).
+  ///   utmLetter: The UTM zone letter ('N' or 'S' for northern or southern hemisphere).
+  ///
+  /// Returns:
+  ///   A DDCoordinates object containing the converted decimal degrees values for latitude and longitude.
 
   /// Internal helper method to convert DMS components (degrees, minutes,
   /// seconds) to decimal degrees.
