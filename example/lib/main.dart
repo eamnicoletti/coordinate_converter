@@ -28,4 +28,18 @@ void main() {
   debugPrint('\nDMS to DD:');
   debugPrint('Input DMS: ${dmsInput.toString()}');
   debugPrint('Output DD: ${convertedDD.toString()}');
+
+  // Example 3: Convert UTM to DD
+  UTMCoordinates utmInput = UTMCoordinates(
+    x: 236379,
+    y: 7702067,
+    zoneNumber: 24,
+    isSouthernHemisphere: true,
+  );
+
+  UTMCoordinates utmCoordinatesOutPut = UTMCoordinates.fromDD(ddCoords);
+  debugPrint('\nDD to UTM:');
+  debugPrint('Input DD: ${ddCoords.toString()}');
+  debugPrint('Output UTM: ${utmCoordinatesOutPut.toString()}');
+  debugPrint('Expected Output UTM: ${utmInput.toString()}');
 }

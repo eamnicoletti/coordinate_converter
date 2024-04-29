@@ -1,7 +1,7 @@
+/// coordinate converter library
 library coordinate_converter;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export 'src/core/constants.dart';
+export 'src/models/dd_model.dart';
+export 'src/models/dms_model.dart';
+export 'src/models/utm_model.dart';
