@@ -26,7 +26,7 @@ Based on formulas from [here](https://sigam.ambiente.sp.gov.br/sigam3/Controles/
 
 ```yaml
 dependencies:
-  coord_convert: 0.3.0
+  coord_convert: 0.5.0
 ```
 
 ### Usage
