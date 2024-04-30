@@ -1,7 +1,7 @@
 # Coordinate Converter
 
 <p align="left">
-  <img src="assets/logo/logo.png" width="150" alt="logo">
+  <img src="assets/logo/logo.png" width="300" alt="logo">
 </p>
 
 [![pub package][pub_badge]][pub_badge_link]
