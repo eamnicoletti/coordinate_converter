@@ -103,9 +103,9 @@ Your donation **motivates** me to work more on the **coordinate_converter** and 
 There are multiple ways to donate:
 
 1. You can be my sponsor on [GitHub](https://github.com/sponsors/eamnicoletti)
-2. You can <a href="https://www.buymeacoffee.com/eamnicoletq">buy me a coffee!</a>
-<!-- 3. Or if you are a fan of crypto, you can donate me Bitcoins here: `1L7ghKdcmgydmUJAnmYmMaiVjT1LoP4a45` -->
-<!-- <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="eamnicoletq" data-color="#FFDD00" data-emoji=""  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff" ></script> -->
+<!-- 2. You can <a href="https://www.buymeacoffee.com/eamnicoletq">buy me a coffee!</a> -->
+2. Or if you are a fan of crypto, you can donate me Bitcoins here: `1HhHqNQyJctrcwcYzUE8SrB3b3TVcNVx5P`
+3. You can <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="eamnicoletq" data-color="#FFDD00" data-emoji=""  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff" ></script>
 
 [badge]: https://img.shields.io/badge/style-very_good_analysis-B22C89.svg
 [badge_link]: https://pub.dev/packages/very_good_analysis
