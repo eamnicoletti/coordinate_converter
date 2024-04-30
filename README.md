@@ -3,11 +3,11 @@
 [![pub package][pub_badge]][pub_badge_link]
 [![License: MIT][license_badge]][license_badge_link]
 [![style: very good analysis][badge]][badge_link]
-![GitHub Sponsors](https://img.shields.io/github/sponsors/eamnicoletti) 
-<span class="badge-buymeacoffee">
+<!-- ![GitHub Sponsors](https://img.shields.io/github/sponsors/eamnicoletti)  -->
+<!-- <span class="badge-buymeacoffee">
   <a href="https://www.buymeacoffee.com/eamnicoletq" title="Donate to this project using Buy Me A Coffee"><img src="https://img.shields.io/badge/buy%20me%20a%20coffee-donate-yellow.svg" alt="Buy Me A Coffee donate button" />
   </a>
-</span>
+</span> -->
 
 A package for converting between UTM, DMS and DD coordinates in the WGS84 ellipsoid model.
 
