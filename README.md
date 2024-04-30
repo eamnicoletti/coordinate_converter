@@ -113,4 +113,4 @@ There are multiple ways to donate:
 [license_badge_link]: https://opensource.org/licenses/MIT
 [pub_badge]: https://img.shields.io/pub/v/coordinate_converter
 [pub_badge_link]: https://pub.dartlang.org/packages/coordinate_converter
-[sigam_link]: https://sigam.ambiente.sp.gov.br/sigam3/Controles/latlongutm.htm?latTxt=ctl00_con)
+[sigam_link]: https://sigam.ambiente.sp.gov.br/sigam3/Controles/latlongutm.htm?latTxt=ctl00_con
