@@ -106,10 +106,12 @@ There are multiple ways to donate:
 2. If you are a fan of crypto, you can donate me Bitcoins here: `1HhHqNQyJctrcwcYzUE8SrB3b3TVcNVx5P`
 3. Or you just: 
 
-[![Buy Me a Coffee](https://img.buymeacoffee.com/button-api/?slug=eamnicoletq&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff)](https://www.buymeacoffee.com/eamnicoletq)
+  [![Buy Me a Coffee][bymeacoffe_button]][bymeacoffe_donation_link]
 
 [badge]: https://img.shields.io/badge/style-very_good_analysis-B22C89.svg
 [badge_link]: https://pub.dev/packages/very_good_analysis
+[bymeacoffe_button]: https://img.buymeacoffee.com/button-api/?slug=eamnicoletq&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff
+[bymeacoffe_donation_link]: https://www.buymeacoffee.com/eamnicoletq
 [license_badge]: https://img.shields.io/badge/license-MIT-blue.svg
 [license_badge_link]: https://opensource.org/licenses/MIT
 [pub_badge]: https://img.shields.io/pub/v/coordinate_converter
