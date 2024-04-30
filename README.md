@@ -1,13 +1,14 @@
 # Coordinate Converter
 
+<p align="left">
+  <img src="assets/logo/logo.png" width="150" alt="logo">
+</p>
+
 [![pub package][pub_badge]][pub_badge_link]
 [![License: MIT][license_badge]][license_badge_link]
 [![style: very good analysis][badge]][badge_link]
-<!-- ![GitHub Sponsors](https://img.shields.io/github/sponsors/eamnicoletti)  -->
-<!-- <span class="badge-buymeacoffee">
-  <a href="https://www.buymeacoffee.com/eamnicoletq" title="Donate to this project using Buy Me A Coffee"><img src="https://img.shields.io/badge/buy%20me%20a%20coffee-donate-yellow.svg" alt="Buy Me A Coffee donate button" />
-  </a>
-</span> -->
+
+---
 
 A package for converting between UTM, DMS and DD coordinates in the WGS84 ellipsoid model.
 
@@ -23,7 +24,7 @@ The Universal Transverse Mercator - UTM coordinate system is explained on this [
 The Geographic Coordinate System - GCS is explained on this [Wikipedia](https://en.wikipedia.org/wiki/Geographic_coordinate_system) page.
 The World Geodetic System and WGS84 are explained on this [Wikipedia](https://en.wikipedia.org/wiki/World_Geodetic_System#WGS84) page.
 
-Based on formulas from [here](https://sigam.ambiente.sp.gov.br/sigam3/Controles/latlongutm.htm?latTxt=ctl00_con).
+**Note**: This package was inspired by [sigam][sigam_link].
 
 ## Getting started
 
@@ -112,3 +113,4 @@ There are multiple ways to donate:
 [license_badge_link]: https://opensource.org/licenses/MIT
 [pub_badge]: https://img.shields.io/pub/v/coordinate_converter
 [pub_badge_link]: https://pub.dartlang.org/packages/coordinate_converter
+[sigam_link]: https://sigam.ambiente.sp.gov.br/sigam3/Controles/latlongutm.htm?latTxt=ctl00_con)
