@@ -20,10 +20,10 @@ class UTMCoordinates {
     zoneNumber = zoneNumber;
   }
 
-  /// Easting Coordinate in [double]. (x-coordinate)
+  /// Easting Coordinate in [double]. (x-coordinate in meters)
   double x;
 
-  /// Northing Coordinate in [double]. (y-coordinate)
+  /// Northing Coordinate in [double]. (y-coordinate in meters)
   double y;
 
   /// UTM Zone Number in [int].

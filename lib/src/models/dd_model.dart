@@ -6,12 +6,22 @@ import 'package:coordinate_converter/src/models/utm_model.dart';
 /// Decimal Degrees - DD coordinates object.
 class DDCoordinates {
   /// constructor
-  DDCoordinates({required this.latitude, required this.longitude});
+  DDCoordinates({required this.latitude, required this.longitude})
+      : assert(
+          latitude >= -90 && latitude <= 90,
+          'Latitude must be between -90 and 90 degrees.',
+        ),
+        assert(
+          longitude >= -180 && longitude <= 180,
+          'Longitude must be between -180 and 180 degrees.',
+        );
 
   /// Latitude in decimal degrees [double].
+  /// Must be between -90 and 90 degrees.
   double latitude;
 
   /// Longitude in decimal degrees [double].
+  /// Must be between -180 and 180 degrees.
   double longitude;
 
   /// Converts Degrees, Minutes and Seconds - DMS coordinates [DMSCoordinates]
