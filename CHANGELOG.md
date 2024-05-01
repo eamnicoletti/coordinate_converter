@@ -1,3 +1,7 @@
+## 0.6.0
+
+* Creates utmToDD feature
+
 ## 0.5.0
 
 * New ddToDMS current instance converter 
