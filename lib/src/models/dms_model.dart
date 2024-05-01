@@ -10,10 +10,10 @@ class DMSCoordinates {
     required this.latMinutes,
     required this.latSeconds,
     required this.latDirection,
-    required this.lonDegrees,
-    required this.lonMinutes,
-    required this.lonSeconds,
-    required this.lonDirection,
+    required this.longDegrees,
+    required this.longMinutes,
+    required this.longSeconds,
+    required this.longDirection,
   });
 
   /// Latitude degrees in [int].
@@ -29,16 +29,16 @@ class DMSCoordinates {
   DirectionY latDirection;
 
   /// Longitude minutes in [int].
-  int lonDegrees;
+  int longDegrees;
 
   /// Longitude minutes in [int].
-  int lonMinutes;
+  int longMinutes;
 
   /// Longitude seconds in [double].
-  double lonSeconds;
+  double longSeconds;
 
   /// Latitude direction in [DirectionX] enum.
-  DirectionX lonDirection;
+  DirectionX longDirection;
 
   /// Converts Decimal Degrees - DD coordinates [DDCoordinates] to
   /// Degrees, Minutes and Seconds - DMS coordinates [DMSCoordinates].
@@ -53,11 +53,11 @@ class DMSCoordinates {
     return CoordConverter.dmsToDD(this);
   }
 
-  /// Returns boths coordinates in [String].
+  /// Returns current instance of coordinates in [String].
   @override
   String toString() {
     return "$latDegrees° $latMinutes' ${latSeconds.toStringAsFixed(2)}"
-        ' ${latDirection.abbreviation}" | $lonDegrees° $lonMinutes '
-        '${lonSeconds.toStringAsFixed(2)}" ${lonDirection.abbreviation}';
+        ' ${latDirection.abbreviation}" | $longDegrees° $longMinutes '
+        '${longSeconds.toStringAsFixed(2)}" ${longDirection.abbreviation}';
   }
 }
