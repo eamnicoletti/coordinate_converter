@@ -1,19 +1,11 @@
-/// Direction for the latitude
-enum DirectionY {
-  north('N'),
-  south('S');
+/// Semi-major axis of the ellipsoid model (WGS84), in meters.
+const double ksmA = 6378137;
 
-  const DirectionY(this.abbreviation);
+/// Semi-minor axis of the ellipsoid model (WGS84), in meters.
+const double ksmB = 6356752.314;
 
-  final String abbreviation;
-}
+/// Eccentricity squared of the ellipsoid model (WGS84).
+const double ksmEccSquared = 6.69437999013e-03;
 
-/// Direction for the longitude
-enum DirectionX {
-  east('E'),
-  west('W');
-
-  const DirectionX(this.abbreviation);
-
-  final String abbreviation;
-}
+/// Universal Transverse Mercator (UTM) scale factor.
+const double kutmScaleFactor = 0.9996;
