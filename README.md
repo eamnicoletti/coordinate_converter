@@ -37,7 +37,7 @@ If you like this tool please [star it on GitHub][github_repository_link]
 
 ```yaml
 dependencies:
-  coord_convert: 0.5.0
+  coord_convert: 0.8.2
 ```
 
 ### Usage
