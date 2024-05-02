@@ -1,7 +1,12 @@
 import 'package:coordinate_converter/coordinate_converter.dart';
 import 'package:coordinate_converter/src/math/from_dd_converter.dart';
 
+/// A class for converting coordinates from DMS to UTM and DD.
 class FromDMSConverter {
+  /// Private constructor to prevent instantiation of the class.
+  /// Since all methods are static, there's no need to create objects.
+  FromDMSConverter._();
+
   /// Converts DMS coordinates to decimal degrees coordinates (DMS).
   ///
   /// This function takes a [DMSCoordinates] object as input and returns a

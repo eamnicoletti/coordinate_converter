@@ -1,19 +1,13 @@
 import 'dart:math' as math;
 
 import 'package:coordinate_converter/coordinate_converter.dart';
+import 'package:coordinate_converter/src/core/constants.dart';
 
+/// A class for converting coordinates from DD to UTM and DD.
 class FromDDConverter {
-  /// Semi-major axis of the ellipsoid model (WGS84), in meters.
-  static const double smA = 6378137;
-
-  /// Semi-minor axis of the ellipsoid model (WGS84), in meters.
-  static const double smB = 6356752.314;
-
-  /// Eccentricity squared of the ellipsoid model (WGS84).
-  static const double smEccSquared = 6.69437999013e-03;
-
-  /// Universal Transverse Mercator (UTM) scale factor.
-  static const double utmScaleFactor = 0.9996;
+  /// Private constructor to prevent instantiation of the class.
+  /// Since all methods are static, there's no need to create objects.
+  FromDDConverter._();
 
   /// Converts Decimal Degrees (DD) coordinates to Degrees-Minutes-Seconds
   /// (DMS).
@@ -53,8 +47,8 @@ class FromDDConverter {
         ((ddCoords.longitude + 180.0) / 6).floor() + 1; // Calculate UTM zone
     final lambda0 = _utmCentralMeridian(zone);
     final xy = _mapLatLonToXY(lat, lon, lambda0);
-    xy[0] = xy[0] * utmScaleFactor + 500000.0;
-    xy[1] = xy[1] * utmScaleFactor;
+    xy[0] = xy[0] * kutmScaleFactor + 500000.0;
+    xy[1] = xy[1] * kutmScaleFactor;
     if (xy[1] < 0.0) {
       xy[1] += 10000000.0;
     }
@@ -114,8 +108,8 @@ class FromDDConverter {
   /// Returns:
   ///   The ellipsoidal distance of the point from the equator, in meters.
   static double _arcLengthOfMeridian(double phi) {
-    const n = (smA - smB) / (smA + smB);
-    final alpha = ((smA + smB) / 2.0) *
+    const n = (ksmA - ksmB) / (ksmA + ksmB);
+    final alpha = ((ksmA + ksmB) / 2.0) *
         (1.0 + (math.pow(n, 2.0) / 4.0) + (math.pow(n, 4.0) / 64.0));
     final beta = (-3.0 * n / 2.0) +
         (9.0 * math.pow(n, 3.0) / 16.0) +
@@ -168,9 +162,10 @@ class FromDDConverter {
   ) {
     // Predefined variables used in the calculation.
     // Pre-calculate ep2, nu2, N, and t for simplification.
-    final ep2 = (math.pow(smA, 2.0) - math.pow(smB, 2.0)) / math.pow(smB, 2.0);
+    final ep2 =
+        (math.pow(ksmA, 2.0) - math.pow(ksmB, 2.0)) / math.pow(ksmB, 2.0);
     final nu2 = ep2 * math.pow(math.cos(phi), 2.0);
-    final N = math.pow(smA, 2.0) / (smB * math.sqrt(1 + nu2));
+    final N = math.pow(ksmA, 2.0) / (ksmB * math.sqrt(1 + nu2));
     final t = math.tan(phi);
     final t2 = t * t;
     final l = lambda - lambda0;
