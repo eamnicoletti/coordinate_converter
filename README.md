@@ -42,29 +42,11 @@ dependencies:
 
 ### Usage
 
-Convert DD to DMS
+Create new instances of Coordinates objects
 
 ```dart
 import 'package:coordinate_converter/coordinate_converter.dart';
-import 'package:flutter/material.dart';
 
-// Create a DDCoordinates object
-DDCoordinates ddCoordInput = DDCoordinates(
-  latitude: -20.762535,
-  longitude: -41.531941,
-);
-
-// call fromDD static method from DMSCoordinates
-DMSCoordinates dmsCoords = DMSCoordinates.fromDD(ddCoordInput);
-
-debugPrint('Output DMS: ${dmsCoords.toString()}');
-// Print output of overridden toString method:
-// flutter: Output DMS: 20° 45' 45.13 S" | 41° 31 54.99" W
-```
-
-Create news instances of Coordinates objects
-
-```dart
 // Decimal Degrees Coordinates
 DDCoordinates ddCoords = DDCoordinates(
   latitude: -20.762535,
