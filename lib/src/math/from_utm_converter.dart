@@ -1,30 +1,31 @@
 import 'package:coordinate_converter/coordinate_converter.dart';
-import 'package:coordinate_converter/src/math/coord_converter.dart';
+import 'package:coordinate_converter/src/math/from_dd_converter.dart';
+import 'package:coordinate_converter/src/utils/projection_manager.dart';
 import 'package:proj4dart/proj4dart.dart';
 
+/// A class for converting coordinates from UTM to DMS and DD.
 class FromUTMConverter {
+  /// Private constructor to prevent instantiation of the class.
+  /// Since all methods are static, there's no need to create objects.
+  FromUTMConverter._();
+
   /// Converts UTM coordinates to decimal degree coordinates.
   ///
   /// This function takes a [UTMCoordinates] object as input and returns a
   /// [DDCoordinates] object. The conversion is done using the proj4dart
   /// library, which provides accurate and efficient coordinate transformations.
   ///
-  /// @param utm The UTM coordinates to convert.
+  /// @param utm: The UTM coordinates to convert.
   /// @return The converted decimal degree coordinates.
   static DDCoordinates convertUTMtoDD(UTMCoordinates utmCoords) {
     // Determine the UTM zone and hemisphere
     final utmZone = utmCoords.zoneNumber;
-    final utmHemisphere = utmCoords.isSouthernHemisphere ? 'S' : 'N';
+    final utmHemisphere = utmCoords.isSouthernHemisphere;
 
-    // Define the UTM projection and WGS84 (DD) projection string
-    final defString = '+proj=utm +zone='
-        '$utmZone +${utmHemisphere == 'N' ? 'north' : 'south'} '
-        '+ellps=WGS84 +datum=WGS84 +units=m +no_defs';
-
-    // Create a UTM projection using the zone number and hemisphere
-    final utmProjection = Projection.add(
-      'UTM$utmZone$utmHemisphere',
-      defString,
+    // Get the UTM projection
+    final utmProjection = ProjectionManager.getUTMProjection(
+      utmZone,
+      isSouthernHemisphere: utmHemisphere,
     );
 
     // Create a WGS84 projection
@@ -50,13 +51,13 @@ class FromUTMConverter {
   /// [DDCoordinates] object. The conversion is done using the proj4dart
   /// library, which provides accurate and efficient coordinate transformations.
   ///
-  /// @param utm The UTM coordinates to convert.
+  /// @param utm: The UTM coordinates to convert.
   /// @return The converted DMS coordinates.
   static DMSCoordinates convertUTMtoDMS(UTMCoordinates utmCoords) {
     // Convert UTM to DD
     final ddCoords = convertUTMtoDD(utmCoords);
 
     // Convert decimal degrees to DMS
-    return CoordConverter.ddToDMS(ddCoords);
+    return FromDDConverter.convertDDtoDMS(ddCoords);
   }
 }

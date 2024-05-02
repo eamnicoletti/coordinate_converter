@@ -1,7 +1,6 @@
-import 'package:coordinate_converter/src/math/coord_converter.dart';
-import 'package:coordinate_converter/src/math/to_dd_converter.dart';
 import 'package:coordinate_converter/src/models/dd_model.dart';
 import 'package:coordinate_converter/src/models/dms_model.dart';
+import 'package:coordinate_converter/src/repo/converter_repo.dart';
 
 /// Universal Transverse Mercator - UTM coordinates object.
 class UTMCoordinates {
@@ -37,24 +36,31 @@ class UTMCoordinates {
   /// Northern Hemisphere ([bool] false) or Southern Hemisphere ([bool] true).
   bool isSouthernHemisphere;
 
-  /// Converts Universal Transverse Mercator - UTM coordinates [UTMCoordinates]
-  /// to Decimal Degrees - DD coordinates [DDCoordinates].
+  /// Converts Decimal Degrees (DD) coordinates [DDCoordinates]
+  /// to Universal Transverse Mercator (UTM) coordinates [UTMCoordinates].
   static UTMCoordinates fromDD(DDCoordinates ddCoords) {
-    return CoordConverter.ddToUTM(ddCoords);
+    return ConverterRepository.convertDDtoUTM(ddCoords);
+  }
+
+  /// Converts Degrees, Minutes and Seconds (DMS) coordinates [DMSCoordinates]
+  /// to Universal Transverse Mercator (UTM) coordinates [UTMCoordinates].
+  static UTMCoordinates fromDMS(DMSCoordinates dmsCoords) {
+    return ConverterRepository.convertDMStoUTM(dmsCoords);
   }
 
   /// Converts the current instance of UTM coordinates [UTMCoordinates] to
-  /// Decimal Degrees (DD) coordinates  and returns the result as a
-  /// [DMSCoordinates] object.
+  /// Decimal Degrees (DD) coordinates and returns the result as a
+  /// [DDCoordinates] object.
   DDCoordinates toDD() {
-    return ToDDConverter.convertUTMtoDD(this);
+    return ConverterRepository.convertUTMtoDD(this);
   }
 
-  /// Converts Degrees, Minutes and Seconds - DMS coordinates [DMSCoordinates]
-  /// to Universal Transverse Mercator - UTM coordinates [UTMCoordinates].
-  // static UTMCoordinates fromDMS(DMSCoordinates dmsCoords) {
-  //   return CoordConverter.dmsToUTM(dmsCoords);
-  // }
+  /// Converts the current instance of UTM coordinates [UTMCoordinates] to
+  /// Degrees, Minutes and Seconds (DMS) coordinates and returns the result as
+  /// a [DMSCoordinates] object.
+  DMSCoordinates toDMS() {
+    return ConverterRepository.convertUTMtoDMS(this);
+  }
 
   /// Returns current instance of coordinates in [String].
   @override

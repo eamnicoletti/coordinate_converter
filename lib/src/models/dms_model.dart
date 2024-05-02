@@ -1,6 +1,7 @@
-import 'package:coordinate_converter/src/core/constants.dart';
-import 'package:coordinate_converter/src/math/coord_converter.dart';
+import 'package:coordinate_converter/src/core/enums.dart';
 import 'package:coordinate_converter/src/models/dd_model.dart';
+import 'package:coordinate_converter/src/models/utm_model.dart';
+import 'package:coordinate_converter/src/repo/converter_repo.dart';
 
 /// Degrees, Minutes and Seconds - DMS coordinates object.
 class DMSCoordinates {
@@ -83,7 +84,16 @@ class DMSCoordinates {
   /// @param [DDCoordinates].
   /// @return [DMSCoordinates].
   static DMSCoordinates fromDD(DDCoordinates ddCoords) {
-    return CoordConverter.ddToDMS(ddCoords);
+    return ConverterRepository.convertDDtoDMS(ddCoords);
+  }
+
+  /// Converts UTM coordinates to Degrees, Minutes and Seconds (DMS)
+  /// coordinates.
+  ///
+  /// @param [UTMCoordinates].
+  /// @return [DMSCoordinates].
+  static DMSCoordinates fromUTM(UTMCoordinates utmCoordinates) {
+    return ConverterRepository.convertUTMtoDMS(utmCoordinates);
   }
 
   /// Converts the current instance of Degrees, Minutes, and Seconds (DMS)
@@ -91,7 +101,15 @@ class DMSCoordinates {
   ///
   /// @return [DDCoordinates].
   DDCoordinates toDD() {
-    return CoordConverter.dmsToDD(this);
+    return ConverterRepository.convertDMStoDD(this);
+  }
+
+  /// Converts the current instance of Degrees, Minutes, and Seconds (DMS)
+  /// coordinates to UTM coordinates object.
+  ///
+  /// @return [UTMCoordinates].
+  UTMCoordinates toUTM() {
+    return ConverterRepository.convertDMStoUTM(this);
   }
 
   /// Returns current instance of coordinates in [String].
