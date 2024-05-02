@@ -21,10 +21,15 @@ A package for converting between UTM, DMS and DD coordinates in the WGS84 ellips
 
 
 The Universal Transverse Mercator - UTM coordinate system is explained on this [Wikipedia](https://en.wikipedia.org/wiki/Universal_Transverse_Mercator_coordinate_system) page.
+
 The Geographic Coordinate System - GCS is explained on this [Wikipedia](https://en.wikipedia.org/wiki/Geographic_coordinate_system) page.
+
 The World Geodetic System and WGS84 are explained on this [Wikipedia](https://en.wikipedia.org/wiki/World_Geodetic_System#WGS84) page.
 
+
 **Note**: This package was inspired by [sigam][sigam_link].
+
+If you like this tool please [star it on GitHub][github_repository_link]
 
 ## Getting started
 
@@ -57,38 +62,99 @@ debugPrint('Output DMS: ${dmsCoords.toString()}');
 // flutter: Output DMS: 20° 45' 45.13 S" | 41° 31 54.99" W
 ```
 
-Convert DMS to DD
+Create news instances of Coordinates objects
 
 ```dart
-// Create a DMSCoordinates object
-DMSCoordinates dmsCoordInput = DMSCoordinates(
-  latDegrees: 20,
-  latMinutes: 45,
-  latSeconds: 45.12540000,
-  latDirection: DirectionY.south,
-  lonDegrees: 41,
-  lonMinutes: 31,
-  lonSeconds: 54.98760000,
-  lonDirection: DirectionX.west,
+// Decimal Degrees Coordinates
+DDCoordinates ddCoords = DDCoordinates(
+  latitude: -20.762535,
+  longitude: -41.531941,
 );
 
-// call fromDMS static method from DDCoordinates
-DDCoordinates ddCoords = DDCoordinates.fromDMS(dmsCoordInput);
+// Degrees, Minutes and Seconds Coordinates
+DMSCoordinates dmsCoords = DMSCoordinates(
+  latDegrees: 20,
+  latMinutes: 45,
+  latSeconds: 45.12,
+  latDirection: DirectionY.south,
+  longDegrees: 41,
+  longMinutes: 31,
+  longSeconds: 54.98,
+  longDirection: DirectionX.west,
+);
 
-debugPrint('Output DD: ${ddCoords.toString()}');
-// Print output of overridden toString method:
-// flutter: Output DD: -20.762534833333333, -41.531940999999996
+// Universal Transverse Mercator Coordinates
+UTMCoordinates utmCoords = UTMCoordinates(
+  x: 236379,
+  y: 7702067,
+  zoneNumber: 24,
+  isSouthernHemisphere: true,
+);
 ```
 
-Convert DD to UTM
+1. Convert to DD
 
 ```dart
-// call fromDD static method from UTMCoordinates
-UTMCoordinates utmCoord = UTMCoordinates.fromDD(ddCoordInput);
+// 1.1 DMS to DD
+// Use static method
+DDCoordinates convertedDDCoords = DDCoordinates.fromDMS(dmsCoords);
+// OR
+// Convert the current instance
+convertedDDCoords = dmsCoords.toDD();
 
-debugPrint('Output UTM: ${utmCoord.toString()}');
+// 1.2 UTM to DD
+// Use static method
+convertedDDCoords = DDCoordinates.fromUTM(utmCoords);
+// OR
+// Convert the current instance
+convertedDDCoords = utmCoords.toDD();
+
+debugPrint('Output DD: ${convertedDDCoords.toString()}');
 // Print output of overridden toString method:
-// flutter: Output UTM: 24 236379.0 | 7702067.0 S
+// flutter: Output DD: -20.76253582021867, -41.53194825871451
+```
+
+2. Convert to DMS
+
+```dart
+// 2.1 DD to DMS
+// Use static method
+DMSCoordinates convertedDMSCoords = DMSCoordinates.fromDD(ddCoords);
+// OR
+// Convert the current instance
+convertedDMSCoords = ddCoords.toDMS();
+
+// 2.2 UTM to DMS
+// Use static method
+convertedDMSCoords = DMSCoordinates.fromUTM(utmCoords);
+// OR
+// Convert the current instance
+convertedDMSCoords = utmCoords.toDMS();
+
+debugPrint('Output DMS: ${convertedDMSCoords.toString()}');
+// Print output of overridden toString method:
+// flutter: Output DMS: 20° 45' 45.13 S" | 41° 31 54.99" W
+```
+3. Convert to UTM
+
+```dart
+// 3.1 DD to UTM
+// Use static method
+UTMCoordinates convertedUTMCoords = UTMCoordinates.fromDD(ddCoords);
+// OR
+// Convert the current instance
+convertedUTMCoords = ddCoords.toUTM();
+
+// 3.2 DMS to UTM
+// Use static method
+convertedUTMCoords = UTMCoordinates.fromDMS(dmsCoords);
+// OR
+// Convert the current instance
+convertedUTMCoords = dmsCoords.toUTM();
+
+debugPrint('Output UTM: ${convertedUTMCoords.toString()}');
+// Print output of overridden toString method:
+// flutter: Output UTM: 24 236379.75470806437 / 7702067.102859227 S
 ```
 
 ## Contributing
@@ -106,12 +172,13 @@ There are multiple ways to donate:
 2. If you are a fan of crypto, you can donate me Bitcoins here: `1HhHqNQyJctrcwcYzUE8SrB3b3TVcNVx5P`
 3. Or you just: 
 
-  [![Buy Me a Coffee][bymeacoffe_button]][bymeacoffe_donation_link]
+   [![Buy Me a Coffee][bymeacoffe_button]][bymeacoffe_donation_link]
 
 [badge]: https://img.shields.io/badge/style-very_good_analysis-B22C89.svg
 [badge_link]: https://pub.dev/packages/very_good_analysis
 [bymeacoffe_button]: https://img.buymeacoffee.com/button-api/?slug=eamnicoletq&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff
 [bymeacoffe_donation_link]: https://www.buymeacoffee.com/eamnicoletq
+[github_repository_link]: https://github.com/eamnicoletti/coordinate_converter
 [license_badge]: https://img.shields.io/badge/license-MIT-blue.svg
 [license_badge_link]: https://opensource.org/licenses/MIT
 [pub_badge]: https://img.shields.io/pub/v/coordinate_converter
