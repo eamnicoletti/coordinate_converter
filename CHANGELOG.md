@@ -1,3 +1,10 @@
+## 0.8.2
+
+* Creates dmsToUTM feature
+* Creates utmToUTM feature
+* Code review and architecture changes
+* Resolves warnings
+
 ## 0.6.0
 
 * Creates utmToDD feature

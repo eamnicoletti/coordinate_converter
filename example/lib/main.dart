@@ -117,7 +117,7 @@ void main() {
   // Convert the current instance
   convertedUTMCoords = dmsCoords.toUTM();
 
-  debugPrint('\n3.1. DMS to UTM:');
+  debugPrint('\n3.2. DMS to UTM:');
   debugPrint('Input DMS: ${dmsCoords.toString()}');
   debugPrint('Output UTM: ${convertedUTMCoords.toString()}');
   // flutter: Input DMS: 20° 45' 45.12 S" | 41° 31 54.98" W
