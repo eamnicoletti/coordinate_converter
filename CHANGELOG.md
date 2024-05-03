@@ -1,7 +1,12 @@
+## 1.0.0
+
+* Tests for converters
+* Code review and fix bugs
+
 ## 0.8.2
 
 * Creates dmsToUTM feature
-* Creates utmToUTM feature
+* Creates utmToDMS feature
 * Code review and architecture changes
 * Resolves warnings
 
