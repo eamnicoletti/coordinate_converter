@@ -55,7 +55,7 @@ void main() {
     );
   });
   group('FromDMSConverter - Test in Alegre|ES|Brazil', () {
-    test('convertDMStoDD returns correct DMSCoordinates', () {
+    test('convertDMStoDD returns correct DDCoordinates', () {
       final result = FromDMSConverter.convertDMStoDD(dmsCoordsBrazil);
 
       expect(result.latitude, closeTo(-20.762535, 0.0001));
@@ -73,7 +73,7 @@ void main() {
   });
 
   group('FromDMSConverter - Test in Oakdale|MN|USA', () {
-    test('convertDMStoDD returns correct DMSCoordinates', () {
+    test('convertDMStoDD returns correct DDCoordinates', () {
       final result = FromDMSConverter.convertDMStoDD(dmsCoordsUSA);
 
       expect(result.latitude, closeTo(44.963433, 0.0001));
@@ -91,7 +91,7 @@ void main() {
   });
 
   group('FromDMSConverter - Test in Utrecht|UT|Netherlands', () {
-    test('convertDMStoDD returns correct DMSCoordinates', () {
+    test('convertDMStoDD returns correct DDCoordinates', () {
       final result = FromDMSConverter.convertDMStoDD(dmsCoordsNetherlands);
 
       expect(result.latitude, closeTo(52.090413, 0.0001));
@@ -109,7 +109,7 @@ void main() {
   });
 
   group('FromDMSConverter - Test in Sydney|NSW|Australia', () {
-    test('convertDMStoDD returns correct DMSCoordinates', () {
+    test('convertDMStoDD returns correct DDCoordinates', () {
       final result = FromDMSConverter.convertDMStoDD(dmsCoordsAustralia);
 
       expect(result.latitude, closeTo(-33.871180, 0.0001));
