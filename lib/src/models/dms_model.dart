@@ -7,6 +7,7 @@ import 'package:coordinate_converter/src/repo/converter_repo.dart';
 class DMSCoordinates {
   /// constructor
   DMSCoordinates({
+    required this.latDegrees,
     required this.latMinutes,
     required this.latSeconds,
     required this.latDirection,
@@ -14,7 +15,6 @@ class DMSCoordinates {
     required this.longMinutes,
     required this.longSeconds,
     required this.longDirection,
-    this.latDegrees = -90,
   })  : assert(
           latDegrees >= -90 && latDegrees <= 90,
           'Latitude degrees must be between -90 and 90.',
