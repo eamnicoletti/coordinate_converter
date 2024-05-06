@@ -1,6 +1,8 @@
 # Coordinate Converter
 
-[![Coordinate Converter][logo_link]]
+<p align="left">
+  <img src=[logo_link] width="300" alt="logo">
+</p>
 
 [![pub package][pub_badge]][pub_badge_link]
 [![License: MIT][license_badge]][license_badge_link]
@@ -18,13 +20,11 @@ A package for converting between UTM, DMS and DD coordinates in the WGS84 ellips
 - **WGS-84** | Standart used in most maps such as Google Maps, Apple Maps, Mapbox, OpenStreetMaps, etc
 
 
-
 The Universal Transverse Mercator - UTM coordinate system is explained on this [Wikipedia](https://en.wikipedia.org/wiki/Universal_Transverse_Mercator_coordinate_system) page.
 
 The Geographic Coordinate System - GCS is explained on this [Wikipedia](https://en.wikipedia.org/wiki/Geographic_coordinate_system) page.
 
 The World Geodetic System and WGS84 are explained on this [Wikipedia](https://en.wikipedia.org/wiki/World_Geodetic_System#WGS84) page.
-
 
 
 **Note**: This package was inspired by [sigam][sigam_link].
