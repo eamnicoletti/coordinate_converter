@@ -1,8 +1,6 @@
 # Coordinate Converter
 
-<p align="left">
-  <img src="assets/logo/logo.png" width="300" alt="logo">
-</p>
+[![Coordinate Converter][logo_link]]
 
 [![pub package][pub_badge]][pub_badge_link]
 [![License: MIT][license_badge]][license_badge_link]
@@ -20,11 +18,13 @@ A package for converting between UTM, DMS and DD coordinates in the WGS84 ellips
 - **WGS-84** | Standart used in most maps such as Google Maps, Apple Maps, Mapbox, OpenStreetMaps, etc
 
 
+
 The Universal Transverse Mercator - UTM coordinate system is explained on this [Wikipedia](https://en.wikipedia.org/wiki/Universal_Transverse_Mercator_coordinate_system) page.
 
 The Geographic Coordinate System - GCS is explained on this [Wikipedia](https://en.wikipedia.org/wiki/Geographic_coordinate_system) page.
 
 The World Geodetic System and WGS84 are explained on this [Wikipedia](https://en.wikipedia.org/wiki/World_Geodetic_System#WGS84) page.
+
 
 
 **Note**: This package was inspired by [sigam][sigam_link].
@@ -115,7 +115,7 @@ convertedDMSCoords = utmCoords.toDMS();
 
 debugPrint('Output DMS: ${convertedDMSCoords.toString()}');
 // Print output of overridden toString method:
-// flutter: Output DMS: 20° 45' 45.13 S" | 41° 31 54.99" W
+// flutter: Output DMS: 20° 45' 45.13" S | 41° 31 54.99" W
 ```
 3. Convert to UTM
 
@@ -163,6 +163,7 @@ There are multiple ways to donate:
 [github_repository_link]: https://github.com/eamnicoletti/coordinate_converter
 [license_badge]: https://img.shields.io/badge/license-MIT-blue.svg
 [license_badge_link]: https://opensource.org/licenses/MIT
+[logo_link]: https://raw.githubusercontent.com/eamnicoletti/coordinate_converter/main/assets/logo/logo.png
 [pub_badge]: https://img.shields.io/pub/v/coordinate_converter
 [pub_badge_link]: https://pub.dartlang.org/packages/coordinate_converter
 [sigam_link]: https://sigam.ambiente.sp.gov.br/sigam3/Controles/latlongutm.htm?latTxt=ctl00_con
