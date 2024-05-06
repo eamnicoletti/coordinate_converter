@@ -44,7 +44,7 @@ void main() {
   debugPrint('Input DMS: ${dmsCoords.toString()}');
   debugPrint('Output DD: ${convertedDDCoords.toString()}');
   // flutter: DMS to DD:
-  // flutter: Input DMS: 20° 45' 45.12 S" | 41° 31 54.98" W
+  // flutter: Input DMS: 20° 45' 45.12" S | 41° 31 54.98" W
   // flutter: Output DD: -20.762533333333334, -41.53193888888889
 
   // 1.2 UTM to DD
@@ -77,7 +77,7 @@ void main() {
   debugPrint('Output DMS: ${convertedDMSCoords.toString()}');
   // flutter: DD to DMS:
   // flutter: Input DD: -20.762535, -41.531941
-  // flutter: Output DMS: 20° 45' 45.13 S" | 41° 31 54.99" W
+  // flutter: Output DMS: 20° 45' 45.13" S | 41° 31 54.99" W
 
   // 2.2 UTM to DMS
   // Use static method
@@ -91,7 +91,7 @@ void main() {
   debugPrint('Output DMS: ${convertedDMSCoords.toString()}');
   // flutter: UTM to DMS:
   // flutter: Input UTM: 24 236379.0 / 7702067.0 S
-  // flutter: Output DMS: 20° 45' 45.13 S" | 41° 31 54.99" W
+  // flutter: Output DMS: 20° 45' 45.13" S | 41° 31 54.99" W
 
   // ---------------------------------------------------------------------------
 
@@ -120,6 +120,6 @@ void main() {
   debugPrint('\n3.2. DMS to UTM:');
   debugPrint('Input DMS: ${dmsCoords.toString()}');
   debugPrint('Output UTM: ${convertedUTMCoords.toString()}');
-  // flutter: Input DMS: 20° 45' 45.12 S" | 41° 31 54.98" W
+  // flutter: Input DMS: 20° 45' 45.12" S | 41° 31 54.98" W
   // flutter: Output UTM: 24 236379.75470806437 / 7702067.102859227 S
 }

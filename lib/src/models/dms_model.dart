@@ -116,7 +116,10 @@ class DMSCoordinates {
   @override
   String toString() {
     return "$latDegrees° $latMinutes' ${latSeconds.toStringAsFixed(2)}"
-        ' ${latDirection.abbreviation}" | $longDegrees° $longMinutes '
-        '${longSeconds.toStringAsFixed(2)}" ${longDirection.abbreviation}';
+        '" '
+        '${latDirection.abbreviation} | '
+        "$longDegrees° $longMinutes' ${longSeconds.toStringAsFixed(2)}"
+        '" '
+        '${longDirection.abbreviation}';
   }
 }
