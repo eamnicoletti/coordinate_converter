@@ -1,7 +1,7 @@
 # Coordinate Converter
 
 <p align="left">
-  <img src=[logo_link] width="300" alt="logo">
+  <img src=https://raw.githubusercontent.com/eamnicoletti/coordinate_converter/main/assets/logo/logo.png width="300" alt="Coordinate Converter Logo">
 </p>
 
 [![pub package][pub_badge]][pub_badge_link]
@@ -163,7 +163,6 @@ There are multiple ways to donate:
 [github_repository_link]: https://github.com/eamnicoletti/coordinate_converter
 [license_badge]: https://img.shields.io/badge/license-MIT-blue.svg
 [license_badge_link]: https://opensource.org/licenses/MIT
-[logo_link]: https://raw.githubusercontent.com/eamnicoletti/coordinate_converter/main/assets/logo/logo.png
 [pub_badge]: https://img.shields.io/pub/v/coordinate_converter
 [pub_badge_link]: https://pub.dartlang.org/packages/coordinate_converter
 [sigam_link]: https://sigam.ambiente.sp.gov.br/sigam3/Controles/latlongutm.htm?latTxt=ctl00_con
