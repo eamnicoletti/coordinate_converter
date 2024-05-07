@@ -122,4 +122,20 @@ void main() {
   debugPrint('Output UTM: ${convertedUTMCoords.toString()}');
   // flutter: Input DMS: 20° 45' 45.12" S | 41° 31 54.98" W
   // flutter: Output UTM: 24 236379.75470806437 / 7702067.102859227 S
+
+  // 4. Fixed-point string with fixed decimal places
+  debugPrint(ddCoords.latitudeToStringAsFixed(2));
+  debugPrint(ddCoords.longitudeToStringAsFixed(4));
+  // flutter: -20.76
+  // flutter: -41.5319
+
+  debugPrint(dmsCoords.latitudeToStringAsFixed(4));
+  debugPrint(dmsCoords.longitudeToStringAsFixed(4));
+  // flutter: 20° 45' 45.1200"
+  // flutter: 41° 31' 54.9800"
+
+  debugPrint(utmCoords.xToStringAsFixed(5));
+  debugPrint(utmCoords.yToStringAsFixed(0));
+  // flutter: 236379.00000
+  // flutter: 7702067
 }
