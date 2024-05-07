@@ -143,7 +143,8 @@ class DMSCoordinates {
   String latitudeToStringAsFixed(int fractionDigits) {
     return "$latDegrees° $latMinutes' "
         '${latSeconds.toStringAsFixed(fractionDigits)}'
-        '"';
+        '" '
+        '${latDirection.abbreviation}';
   }
 
   // A decimal-point string-representation of this number.
@@ -166,6 +167,7 @@ class DMSCoordinates {
   String longitudeToStringAsFixed(int fractionDigits) {
     return "$longDegrees° $longMinutes' "
         '${longSeconds.toStringAsFixed(fractionDigits)}'
-        '"';
+        '" '
+        '${longDirection.abbreviation}';
   }
 }
