@@ -5,8 +5,8 @@
 </p>
 
 [![pub package][pub_badge]][pub_badge_link]
-[![License: MIT][license_badge]][license_badge_link]
 [![style: very good analysis][very_good_analysis_badge]][very_good_analysis_badge_link]
+[![License: MIT][license_badge]][license_badge_link]
 [![Conventional Commits][conventional_commits_badge]][conventional_commits_badge_link]
 
 ---
