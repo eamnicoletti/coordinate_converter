@@ -1,3 +1,8 @@
+## 1.1.1
+
+* New fixed-point string with fixed decimal places features
+* Fix the toString returns in the DMSCoordinates
+
 ## 1.0.0
 
 * Tests for converters
