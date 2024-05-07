@@ -1,6 +1,6 @@
 import 'package:coordinate_converter/src/core/enums.dart';
-import 'package:coordinate_converter/src/models/dd_model.dart';
-import 'package:coordinate_converter/src/models/utm_model.dart';
+import 'package:coordinate_converter/src/models/dd_coordinates_model.dart';
+import 'package:coordinate_converter/src/models/utm_coordinates_model.dart';
 import 'package:coordinate_converter/src/repo/converter_repo.dart';
 
 /// Degrees, Minutes and Seconds - DMS coordinates object.

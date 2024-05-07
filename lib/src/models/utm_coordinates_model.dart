@@ -1,5 +1,5 @@
-import 'package:coordinate_converter/src/models/dd_model.dart';
-import 'package:coordinate_converter/src/models/dms_model.dart';
+import 'package:coordinate_converter/src/models/dd_coordinates_model.dart';
+import 'package:coordinate_converter/src/models/dms_coordinates_model.dart';
 import 'package:coordinate_converter/src/repo/converter_repo.dart';
 
 /// Universal Transverse Mercator - UTM coordinates object.

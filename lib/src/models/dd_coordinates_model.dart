@@ -1,5 +1,5 @@
-import 'package:coordinate_converter/src/models/dms_model.dart';
-import 'package:coordinate_converter/src/models/utm_model.dart';
+import 'package:coordinate_converter/src/models/dms_coordinates_model.dart';
+import 'package:coordinate_converter/src/models/utm_coordinates_model.dart';
 import 'package:coordinate_converter/src/repo/converter_repo.dart';
 
 /// Decimal Degrees - DD coordinates object.
