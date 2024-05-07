@@ -6,7 +6,8 @@
 
 [![pub package][pub_badge]][pub_badge_link]
 [![License: MIT][license_badge]][license_badge_link]
-[![style: very good analysis][badge]][badge_link]
+[![style: very good analysis][very_good_analysis_badge]][very_good_analysis_badge_link]
+[![Conventional Commits][conventional_commits_badge]][conventional_commits_badge_link]
 
 ---
 
@@ -156,13 +157,15 @@ There are multiple ways to donate:
 
    [![Buy Me a Coffee][bymeacoffe_button]][bymeacoffe_donation_link]
 
-[badge]: https://img.shields.io/badge/style-very_good_analysis-B22C89.svg
-[badge_link]: https://pub.dev/packages/very_good_analysis
 [bymeacoffe_button]: https://img.buymeacoffee.com/button-api/?slug=eamnicoletq&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff
 [bymeacoffe_donation_link]: https://www.buymeacoffee.com/eamnicoletq
+[conventional_commits_badge]: https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white
+[conventional_commits_badge_link]: https://conventionalcommits.org
 [github_repository_link]: https://github.com/eamnicoletti/coordinate_converter
 [license_badge]: https://img.shields.io/badge/license-MIT-blue.svg
 [license_badge_link]: https://opensource.org/licenses/MIT
 [pub_badge]: https://img.shields.io/pub/v/coordinate_converter
 [pub_badge_link]: https://pub.dartlang.org/packages/coordinate_converter
 [sigam_link]: https://sigam.ambiente.sp.gov.br/sigam3/Controles/latlongutm.htm?latTxt=ctl00_con
+[very_good_analysis_badge]: https://img.shields.io/badge/style-very_good_analysis-B22C89.svg
+[very_good_analysis_badge_link]: https://pub.dev/packages/very_good_analysis
