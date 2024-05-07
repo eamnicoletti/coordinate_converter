@@ -1,3 +1,7 @@
+## 1.1.2
+
+* Fix the latitude and longitude toStringAsFixed method output for the DMSCoordinates model
+
 ## 1.1.1
 
 * New fixed-point string with fixed decimal places features
