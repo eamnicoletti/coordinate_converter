@@ -54,4 +54,46 @@ class DDCoordinates {
   String toString() {
     return '$latitude, $longitude';
   }
+
+  // A decimal-point string-representation of this number.
+  //
+  // Converts this number to a [double] before computing the string
+  // representation, as by [toDouble].
+  //
+  // If the absolute value of `this` is greater than or equal to `10^21`, then
+  // this methods returns an exponential representation computed by
+  // `this.toStringAsExponential()`. Otherwise the result is the closest string
+  // representation with exactly [fractionDigits] digits after the decimal
+  // point. If [fractionDigits] equals 0, then the decimal point is omitted.
+  //
+  // The parameter [fractionDigits] must be an integer satisfying:
+  // `0 <= fractionDigits <= 20`.
+  //
+  /// @param [fractionDigits] as an integer .
+  /// @return [latitude] of the current instance as a fixed-point [String] with
+  /// [fractionDigits] decimal places. Just Numbers.
+  String latitudeToStringAsFixed(int fractionDigits) {
+    return latitude.toStringAsFixed(fractionDigits);
+  }
+
+  // A decimal-point string-representation of this number.
+  //
+  // Converts this number to a [double] before computing the string
+  // representation, as by [toDouble].
+  //
+  // If the absolute value of `this` is greater than or equal to `10^21`, then
+  // this methods returns an exponential representation computed by
+  // `this.toStringAsExponential()`. Otherwise the result is the closest string
+  // representation with exactly [fractionDigits] digits after the decimal
+  // point. If [fractionDigits] equals 0, then the decimal point is omitted.
+  //
+  // The parameter [fractionDigits] must be an integer satisfying:
+  // `0 <= fractionDigits <= 20`.
+  //
+  /// @param [fractionDigits] as an integer .
+  /// @return [longitude] of the current instance as a fixed-point [String] with
+  /// [fractionDigits] decimal places. Just Numbers.
+  String longitudeToStringAsFixed(int fractionDigits) {
+    return longitude.toStringAsFixed(fractionDigits);
+  }
 }
