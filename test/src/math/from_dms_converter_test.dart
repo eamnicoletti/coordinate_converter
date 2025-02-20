@@ -1,6 +1,6 @@
 import 'package:coordinate_converter/coordinate_converter.dart';
 import 'package:coordinate_converter/src/math/from_dms_converter.dart';
-import 'package:flutter_test/flutter_test.dart';
+import 'package:test/test.dart';
 
 void main() {
   late DMSCoordinates dmsCoordsBrazil;

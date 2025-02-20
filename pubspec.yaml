@@ -5,16 +5,10 @@ homepage: https://github.com/eamnicoletti/coordinate_converter
 
 environment:
   sdk: '>=3.2.6 <4.0.0'
-  flutter: ">=1.17.0"
 
 dependencies:
-  flutter:
-    sdk: flutter
   proj4dart: ^2.0.0
 
 dev_dependencies:
-  flutter_test:
-    sdk: flutter
+  test: ^1.25.15
   very_good_analysis: ^5.1.0
-
-flutter:
