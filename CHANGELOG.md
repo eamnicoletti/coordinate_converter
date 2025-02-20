@@ -1,3 +1,7 @@
+## 1.2.2
+Other changes:
+* Removed Flutter dependency to make the package compatible with pure Dart projects that don’t rely on Flutter
+
 ## 1.1.2
 Bugs Fixed:
 * Fix the latitude and longitude `toStringAsFixed()` method output for the [DMSCoordinates] model

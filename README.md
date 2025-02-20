@@ -30,7 +30,7 @@ The World Geodetic System and WGS84 are explained on this [Wikipedia](https://en
 
 **Note**: This package was inspired by [sigam][sigam_link].
 
-If you like this tool please [star it on GitHub][github_repository_link]
+If you like this tool please [star it on GitHub][github_repository_link] ⭐
 
 ## Getting started
 
@@ -38,7 +38,7 @@ If you like this tool please [star it on GitHub][github_repository_link]
 
 ```yaml
 dependencies:
-  coord_convert: 1.1.2
+  coord_convert: 1.2.2
 ```
 
 ### Usage
