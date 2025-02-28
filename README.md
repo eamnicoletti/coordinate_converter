@@ -15,8 +15,8 @@ A package for converting between UTM, DMS and DD coordinates in the WGS84 ellips
 
 
 - **UTM** | Universal Transverse Mercator
-- **DMS** | - Degrees, Minutes and Seconds
-- **DD** | - Decimal Degrees
+- **DMS** | Degrees, Minutes and Seconds
+- **DD** | Decimal Degrees
 
 - **WGS-84** | Standart used in most maps such as Google Maps, Apple Maps, Mapbox, OpenStreetMaps, etc
 
@@ -38,7 +38,7 @@ If you like this tool please [star it on GitHub][github_repository_link] ⭐
 
 ```yaml
 dependencies:
-  coord_convert: 1.2.2
+  coordinate_converter: 1.2.2
 ```
 
 ### Usage
