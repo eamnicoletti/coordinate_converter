@@ -1,17 +1,21 @@
+## 1.2.3
+Other changes:
+* Fixes the documentation
+
 ## 1.2.2
 Other changes:
-* Removed Flutter dependency to make the package compatible with pure Dart projects that don’t rely on Flutter
+* Removes Flutter dependency to make the package compatible with pure Dart projects that don’t rely on Flutter
 
 ## 1.1.2
 Bugs Fixed:
-* Fix the latitude and longitude `toStringAsFixed()` method output for the [DMSCoordinates] model
+* Fixes the latitude and longitude `toStringAsFixed()` method output for the [DMSCoordinates] model
 
 ## 1.1.1
 New Features:
 * New fixed-point string with fixed decimal places features
 
 Bugs Fixed:
-* Fix the `toString()` returns in the [DMSCoordinates]
+* Fixes the `toString()` returns in the [DMSCoordinates]
 
 ## 1.0.0
 First stable release of coordinate_converter for multi-platform!
